@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Intelite Tecnologia</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="/png" href="icons/logoAI_preto.png">
+</head>
+<body>
+
+<!-- Conteúdo principal em iframe -->
+<iframe id="main-iframe" src="http://intelite.com.br/ai-admin/#/"></iframe>
+
+<!-- Ícones para abrir os modais -->
+<div class="open-icons">
+  <div class="open-icon" onclick="openModal('myModalCadastroUsuarios')">
+    <img src="icons/logoAI_azul.png" width="20px" alt="Cadastro de Usuários">
+    <span>Criação de Usuários</span>
+  </div>
+
+
+
+
+  <div class="open-icon" onclick="openModal('myModalEvernote')">
+    <img src="icons/anydesk.png" width="20px" alt="Evernote">
+    <span>AnyDesk</span>
+  </div>
+  <div class="open-icon" onclick="openModal('myModalConfiguracaoAtual')">
+    <img src="icons/config.png" width="20px" alt="Configuração Atual">
+    <span>Configuração Atual</span>
+  </div>
+</div>
+
+
+<!-- Modal para exibir o Cadastro de Usuários -->
+<div class="modal fade" id="myModalCadastroUsuarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe id="iframeCadastroUsuarios" src="https://atendimentologins.netlify.app"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal para exibir o Evernote -->
+<div class="modal fade" id="myModalEvernote" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 400px; padding: 0;"> <!-- Tamanho fixo -->
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; top: 10px; right: 10px;">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <iframe id="iframeCadastroUsuarios" src="https://anydeskintelite.netlify.app/" style="width: 100%; height: 700px; border: none; padding: 0px;"></iframe> <!-- Defina a altura desejada aqui -->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal para exibir a Configuração Atual -->
+<div class="modal fade" id="myModalConfiguracaoAtual" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe id="iframeCadastroUsuarios" src="https://configintelite.netlify.app/"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Estilos CSS -->
+<style>
+  /* Estilo para os ícones */
+/* Estilo para os ícones */
+.open-icons {
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* Definindo a largura para ocupar toda a tela */
+  display: flex;
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  background-color: #fff;
+  padding: 10px 0; /* Ajuste conforme necessário */
+  border-top: 1px solid #ccc;
+  z-index: 9999; /* Garante que os ícones fiquem sobrepostos */
+}
+
+
+
+
+body {
+      overflow: hidden;
+    }
+
+.open-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o ícone e o texto */
+  margin: 0 50px; /* Espaçamento entre os ícones */
+}
+
+.open-icon img {
+  margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Estilo para o modal de cadastro de usuários */
+#myModalCadastroUsuarios .modal-dialog {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+#myModalCadastroUsuarios .modal-content {
+  border: none;
+  margin: 0; /* Remover a margem */
+}
+
+#myModalCadastroUsuarios .modal-header {
+  border-bottom: none;
+}
+
+#myModalCadastroUsuarios .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  opacity: 0.5;
+}
+
+#myModalCadastroUsuarios .close:hover {
+  opacity: 1;
+  color: #000;
+}
+
+/* Estilo para o iframe dentro do modal de cadastro de usuários */
+#iframeCadastroUsuarios {
+  width: 100%;
+  height: 700px; /* Ajuste a altura conforme necessário */
+  border: none;
+}
+
+
+  /* Estilo para o iframe principal */
+  #main-iframe {
+    width: 100%;
+    border: none;
+    height: 100vh;
+    padding-bottom: 40px;
+  }
+</style>
+
+<!-- JavaScript para abrir os modais -->
+<script>
+  function openModal(modalId) {
+    $('#' + modalId).modal('show');
+  }
+
+
+
+
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
